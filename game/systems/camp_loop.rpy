@@ -30,12 +30,12 @@ init python:
 
 
     def get_random_kids(n=2):
-        return random.sample(all_kids, n)
+    return get_social_group(n)
 
 
     def trigger_activity_scene():
 
-        kids = get_random_kids(2)
+        kids = get_social_group(2)
         results = []
 
         for kid in kids:
@@ -57,3 +57,17 @@ init python:
             kid.update_trust(-1)
 
         return results
+
+ def get_social_group(n=2):
+
+   	 # Weighted selection based on relationships
+  group = [all_kids[0]]
+
+    while len(group) < n:
+
+        candidate = random.choice(all_kids)
+
+        if candidate not in group:
+            group.append(candidate)
+
+    return group
