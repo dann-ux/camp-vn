@@ -4,6 +4,7 @@ define p = Character("You")
 
 label start:
 
+    $ init_relationships()
     $ time_phase = "morning"
     $ current_day = 1
 
