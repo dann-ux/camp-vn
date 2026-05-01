@@ -21,9 +21,13 @@ init python:
             next_day()
 
     def next_day():
-        global current_day, time_phase
-        current_day += 1
-        time_phase = "morning"
+    global current_day, time_phase
+
+    current_day += 1
+    time_phase = "morning"
+
+    # IMPORTANT: relationship decay over time
+    update_relationship_decay()
 
     def get_phase_text():
         return f"Day {current_day} - {time_phase}"
@@ -31,15 +35,24 @@ init python:
 
     def get_social_group(n=2):
 
-        group = [all_kids[0]]
+    base = [all_kids[0]]
 
-        while len(group) < n:
-            candidate = random.choice(all_kids)
+    while len(base) < n:
 
-            if candidate not in group:
-                group.append(candidate)
+        candidate = random.choice(all_kids)
 
-        return group
+        if candidate not in base:
+
+            # influence chance by relationships
+            bonus = 0
+
+            for b in base:
+                bonus += get_relationship(candidate, b)
+
+            if random.random() + (bonus * 0.05) > 0.5:
+                base.append(candidate)
+
+    return base
 
 
     def trigger_activity_scene():

@@ -43,3 +43,27 @@ init python:
 
         elif event_type == "negative":
             process_shared_event(kid_list, -2)
+def update_relationship_decay():
+
+        # Slowly normalizes relationships over time
+        for a in relationships:
+
+            for b in relationships[a]:
+
+                if relationships[a][b] > 0:
+                    relationships[a][b] -= 0.01
+
+                elif relationships[a][b] < 0:
+                    relationships[a][b] += 0.01
+
+def relationship_bonus(a, b):
+
+        value = get_relationship(a, b)
+
+        if value > 5:
+            return 2  # strong friends
+
+        if value < -5:
+            return -2  # rivals
+
+        return 0
