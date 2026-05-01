@@ -29,8 +29,17 @@ init python:
         return f"Day {current_day} - {time_phase}"
 
 
-    def get_random_kids(n=2):
-    return get_social_group(n)
+    def get_social_group(n=2):
+
+        group = [all_kids[0]]
+
+        while len(group) < n:
+            candidate = random.choice(all_kids)
+
+            if candidate not in group:
+                group.append(candidate)
+
+        return group
 
 
     def trigger_activity_scene():
@@ -48,7 +57,7 @@ init python:
 
     def trigger_conflict_scene():
 
-        kids = get_random_kids(2)
+        kids = get_social_group(2)
         results = []
 
         for kid in kids:
@@ -57,17 +66,3 @@ init python:
             kid.update_trust(-1)
 
         return results
-
- def get_social_group(n=2):
-
-   	 # Weighted selection based on relationships
-  group = [all_kids[0]]
-
-    while len(group) < n:
-
-        candidate = random.choice(all_kids)
-
-        if candidate not in group:
-            group.append(candidate)
-
-    return group
