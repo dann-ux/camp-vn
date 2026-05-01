@@ -1,10 +1,9 @@
-# CAMP LOOP ENGINE
-# Controls day structure and event flow
-
-default current_day = 1
-default time_phase = "morning"  # morning / activity / freeplay / night
-
 init python:
+
+    import random
+
+    current_day = 1
+    time_phase = "morning"
 
     def next_phase():
         global time_phase
@@ -28,3 +27,33 @@ init python:
 
     def get_phase_text():
         return f"Day {current_day} - {time_phase}"
+
+
+    def get_random_kids(n=2):
+        return random.sample(all_kids, n)
+
+
+    def trigger_activity_scene():
+
+        kids = get_random_kids(2)
+        results = []
+
+        for kid in kids:
+            results.append(kid.react("play"))
+            kid.add_memory("Played together")
+            kid.update_trust(1)
+
+        return results
+
+
+    def trigger_conflict_scene():
+
+        kids = get_random_kids(2)
+        results = []
+
+        for kid in kids:
+            results.append(kid.react("conflict"))
+            kid.add_memory("Small disagreement")
+            kid.update_trust(-1)
+
+        return results

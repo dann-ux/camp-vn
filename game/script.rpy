@@ -32,11 +32,16 @@ label start:
 
         elif time_phase == "activity":
 
-            "The group is sent to play together."
+    "The kids gather for a group activity."
 
-            "Laughter and small arguments begin forming naturally."
+    $ results = trigger_activity_scene()
 
-            $ add_memory("system", "Activity phase started")
+    for r in results:
+        "[r]"
+
+    "Small moments of play and confusion happen naturally."
+
+    $ add_memory("system", "Activity phase interactions occurred")
 
         elif time_phase == "freeplay":
 

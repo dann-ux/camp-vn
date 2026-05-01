@@ -1,6 +1,3 @@
-# MEMORY SYSTEM
-# Stores all important events between characters
-
 default memory_log = []
 
 init python:
