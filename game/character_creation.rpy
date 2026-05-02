@@ -1,27 +1,32 @@
 screen character_creation():
     tag menu
     add Solid("#87CEEB")
-    frame:
+    vbox:
         xalign 0.5
-        yalign 0.5
-        background "#FFFFFF"
-        xmaximum 500
-        ymaximum 400
-        vbox:
-            spacing 20
+        yalign 0.3
+        spacing 30
+        text "CREATE YOUR CHARACTER" size 36 bold True color "#FFFFFF" xalign 0.5
+        frame:
+            background "#FFFFFF"
+            xminimum 400
+            vbox:
+                spacing 15
+                xalign 0.5
+                text "Your name:" size 22 color "#333333"
+                input:
+                    value VariableInputValue("player_name")
+                    length 20
+                    size 24
+                    color "#000000"
+        hbox:
             xalign 0.5
-            yalign 0.5
-            text "Create Your Character" size 30 bold True
-            text "Enter your name:" size 20
-            input:
-                value VariableInputValue("player_name")
-                length 20
-            textbutton "Start Game":
-                action Jump("start_game")
-                text_size 20
+            spacing 20
             textbutton "Back":
                 action Jump("title_screen")
-                text_size 20
+                text_size 22
+            textbutton "Start Adventure!":
+                action Jump("start_game")
+                text_size 22
 
 label character_creation:
     $ player_name = "Camp Kid"
