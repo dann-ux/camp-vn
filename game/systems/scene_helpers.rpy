@@ -23,10 +23,8 @@ init -10 python:
         n = min(n, len(pool))
         return random.sample(pool, n)
 
-
     def say_kid(kid, text):
         renpy.say(None, kid.name + ": " + text)
-
 
     def relationship_note(a, b):
         rel = 0
