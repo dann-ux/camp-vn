@@ -50,7 +50,6 @@ label camp_loop:
 
     # Display a short narration about the time of day
     $ part = current_day_part()
-    "[part] of Day [store.current_day]."
 
     # Core camp activities (existing logic)
     p "We are now in the camp."
