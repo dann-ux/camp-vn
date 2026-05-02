@@ -3,7 +3,7 @@ screen character_creation():
     tag menu
 
     # Background
-    background "#87CEEB"
+    add Solid("#87CEEB")
 
     frame:
         xalign 0.5
