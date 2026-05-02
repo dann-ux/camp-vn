@@ -19,10 +19,10 @@ screen settings():
 
             # Placeholder settings
             text "Volume Control" size 20
-            bar value FieldValue(config, "volume")
+            bar value Preference("text speed")
 
             text "Text Speed" size 20
-            bar value FieldValue(config, "text_speed")
+            bar value Preference("auto-forward time")
 
             textbutton "Auto-Forward":
                 action ToggleField(config, "auto_forward")
