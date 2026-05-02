@@ -2,14 +2,14 @@
 
 While running game code:
   File "game/systems/camp_loop.rpy", line 53, in script
-    narrator "[part] of Day [store.current_day]."
+    "[part] of Day [store.current_day]."
 Exception: The say screen (or show_function) must return a Text object.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "game/systems/camp_loop.rpy", line 53, in script
-    narrator "[part] of Day [store.current_day]."
+    "[part] of Day [store.current_day]."
   File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/ast.py", line 921, in execute
     renpy.exports.say(who, what, *args, **kwargs)
   File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/exports.py", line 1373, in say
@@ -25,4 +25,4 @@ Exception: The say screen (or show_function) must return a Text object.
 Linux-6.8.0-1044-azure-x86_64-with-glibc2.39 x86_64
 Ren'Py 8.0.3.22090809
  
-Sat May  2 19:30:01 2026
+Sat May  2 19:35:43 2026
