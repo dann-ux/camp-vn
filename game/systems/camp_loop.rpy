@@ -52,12 +52,12 @@ label camp_loop:
     $ part = current_day_part()
 
     # Core camp activities (existing logic)
-    p "We are now in the camp."
-    p "The daily camp activities can begin."
+    "We are now in the camp."
+    "The daily camp activities can begin."
 
     $ kids = [p, ann]
     $ event_description = format_scene(kids, "freeplay")
-    p "[event_description]"
+    "[event_description]"
 
     # Random event check
     $ _ = trigger_random_event()
