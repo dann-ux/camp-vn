@@ -1,20 +1,21 @@
-Sat May  2 05:12:52 2026
+Sat May  2 18:38:27 2026
 Linux-6.8.0-1044-azure-x86_64-with-glibc2.39
 Ren'Py 8.0.3.22090809
  
 
-Bootstrap to the start of init.init took 0.09s
+Bootstrap to the start of init.init took 0.08s
 Early init took 0.00s
 Loader init took 0.01s
-Loading error handling took 0.21s
-Loading script took 0.18s
+Loading error handling took 0.03s
+Loading script took 0.15s
 Loading save slot metadata. took 0.01s
 Loading persistent took 0.00s
 Faled to initialize steam: OSError('/workspaces/camp-vn/renpy-8.0.3-sdk/lib/py3-linux-x86_64/libsteam_api.so: cannot open shared object file: No such file or directory')
-Running init code took 0.07s
+Running init code took 0.02s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
+Backing up script files to '/home/codespace/.renpy/backups/camp-vn':
 Dump and make backups. took 0.00s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
@@ -24,15 +25,15 @@ Creating interface object took 0.00s
 Cleaning stores took 0.00s
 Init translation took 0.01s
 Build styles took 0.00s
-Load screen analysis took 0.08s
+Load screen analysis took 0.02s
 Analyze screens took 0.00s
 Save screen analysis took 0.00s
-Prepare screens took 0.04s
+Prepare screens took 0.03s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
+Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
-Interface start took 1.49s
+Interface start took 0.15s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1280, 720)
@@ -47,29 +48,15 @@ Could not open 'cache/shaders.txt':
 Maximum texture size: 4096x4096
 
 Full traceback:
-  File "game/events/events.rpy", line 358, in script
-    "[relationship_note(a, b)]"
-  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/ast.py", line 921, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/exports.py", line 1373, in say
-    who(what, *args, **kwargs)
-  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/character.py", line 1253, in __call__
-    what = self.prefix_suffix("what", self.what_prefix, what, self.what_suffix)
-  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/character.py", line 1172, in prefix_suffix
-    return (sub(prefix) + sub(body) + sub(suffix))
-  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/character.py", line 1152, in sub
-    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
-  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/substitutions.py", line 278, in substitute
-    s = formatter.vformat(s, (), kwargs) # type: ignore
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 165, in vformat
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 205, in _vformat
-  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/substitutions.py", line 168, in get_field
-    obj, arg_used = super(Formatter, self).get_field(field_name, args, kwargs)
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 270, in get_field
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 227, in get_value
-KeyError: 'relationship_note(a, b)'
+  File "game/script.rpy", line 4, in script
+    jump title_screen
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/ast.py", line 1974, in execute
+    rv = renpy.game.script.lookup(target)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/script.py", line 927, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'title_screen'.
 
 While running game code:
-  File "game/events/events.rpy", line 358, in script
-    "[relationship_note(a, b)]"
-KeyError: 'relationship_note(a, b)'
+  File "game/script.rpy", line 4, in script
+    jump title_screen
+ScriptError: could not find label 'title_screen'.
