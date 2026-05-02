@@ -4,15 +4,19 @@ label best_friend_scene:
 
     "[a.name] and [b.name] sit together quietly."
 
-    "[a.name] shares something personal."
+    "[a.name] looks at [b.name] seriously."
 
-    "[b.name] listens carefully."
+    "[a.name]: You're my best friend."
 
-    "They seem much closer now."
+    "[b.name] smiles and nods."
+
+    "[b.name]: You're my best friend too."
 
     python:
-        a.update_trust(2)
-        b.update_trust(2)
+        a.update_trust(3)
+        b.update_trust(3)
+        a.add_memory("Made a best friend")
+        b.add_memory("Made a best friend")
 
     return
 
@@ -21,14 +25,18 @@ label rival_scene:
 
     $ a, b = get_social_group(2)
 
-    "[a.name] and [b.name] avoid each other."
+    "[a.name] and [b.name] are glaring at each other."
 
-    "The tension is obvious."
+    "[a.name]: I don't like you."
 
-    "Even small things turn into conflict."
+    "[b.name]: I don't like you either."
+
+    "They turn away from each other."
 
     python:
-        a.update_mood(-1)
-        b.update_mood(-1)
+        a.update_mood(-2)
+        b.update_mood(-2)
+        a.add_memory("Made an enemy")
+        b.add_memory("Made an enemy")
 
     return

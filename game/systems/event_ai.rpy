@@ -6,7 +6,7 @@ init python:
 
         # Base weights
         weights = {
-            "play": 5,
+            "play": 6,
             "conflict": 2,
             "quiet": 3
         }
@@ -16,21 +16,23 @@ init python:
             rel = get_relationship(kids[0], kids[1])
 
             if rel > 2:
-                weights["play"] += 3
-                weights["conflict"] -= 1
+                weights["play"] += 4
+                weights["conflict"] -= 2
 
             elif rel < -2:
-                weights["conflict"] += 4
-                weights["play"] -= 2
+                weights["conflict"] += 5
+                weights["play"] -= 3
 
         # Modify based on mood
         avg_mood = sum(k.mood for k in kids) / len(kids)
 
         if avg_mood < -1:
-            weights["conflict"] += 2
+            weights["conflict"] += 3
+            weights["quiet"] += 2
 
         elif avg_mood > 1:
-            weights["play"] += 2
+            weights["play"] += 3
+            weights["quiet"] -= 1
 
         # Prevent negative weights
         for k in weights:

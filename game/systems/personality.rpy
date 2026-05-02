@@ -6,7 +6,6 @@ init python:
         import random
         kid.personality = random.choice(personalities)
 
-
     def personality_line(kid, context):
 
         p = getattr(kid, "personality", "calm")
@@ -14,43 +13,43 @@ init python:
         if context == "play":
 
             if p == "energetic":
-                return "Come on! Let’s go!!"
+                return "Yay! Let's play! Let's go!"
 
             elif p == "shy":
-                return "Uh… okay, I’ll try…"
+                return "Um... okay... I'll try..."
 
             elif p == "playful":
-                return "Heh, you’re gonna lose!"
+                return "Hee hee! You can't catch me!"
 
             else:
-                return "Alright, let’s do it."
+                return "Okay, that sounds fun."
 
 
         elif context == "conflict":
 
             if p == "energetic":
-                return "Hey! That’s not fair!"
+                return "Hey! That's not fair!"
 
             elif p == "shy":
-                return "I… didn’t mean to…"
+                return "I... I didn't mean to..."
 
             elif p == "playful":
-                return "Oh come on, don’t get mad."
+                return "Oh come on, don't be a baby!"
 
             else:
-                return "Let’s just calm down."
+                return "Let's just be friends."
 
 
         else:
 
             if p == "shy":
-                return "It’s… nice here."
+                return "It's... nice here."
 
             elif p == "energetic":
-                return "This place is kinda fun!"
+                return "This is so fun!"
 
             elif p == "playful":
-                return "Not bad, huh?"
+                return "Hee hee! This is silly!"
 
             else:
-                return "It’s peaceful."
+                return "I like this."
