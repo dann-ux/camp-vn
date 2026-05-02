@@ -1,20 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/systems/camp_loop.rpy", line 55, in script
-    p "We are now in the camp."
-Exception: Sayer b'p' is not a function or string.
+  File "game/script.rpy", line 4, in script
+    jump title_screen
+ScriptError: could not find label 'title_screen'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/systems/camp_loop.rpy", line 55, in script
-    p "We are now in the camp."
-  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/ast.py", line 898, in execute
-    raise Exception("Sayer %s is not a function or string." % self.who.encode("utf-8"))
-Exception: Sayer b'p' is not a function or string.
+  File "game/script.rpy", line 4, in script
+    jump title_screen
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/ast.py", line 1974, in execute
+    rv = renpy.game.script.lookup(target)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/script.py", line 927, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'title_screen'.
 
 Linux-6.8.0-1044-azure-x86_64-with-glibc2.39 x86_64
 Ren'Py 8.0.3.22090809
  
-Sat May  2 19:40:01 2026
+Sat May  2 20:10:23 2026
