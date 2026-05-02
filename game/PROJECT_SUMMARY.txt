@@ -6,11 +6,13 @@ Create a professional-grade visual novel set in a summer camp where the player (
 - Allow branching relationships (friends, rivals, best friends, enemies).
 - Include deep emotional moments tied to relationship states.
 - Provide multiple narrative paths based on player choices.
+- Include a title screen, character creation, and professional visual novel UI.
 
 ## What Has Been Implemented So Far
 1. **Character System**
-   - `Kid` class with mood, trust, personality, and memory tracking.
-   - Global `all_kids` list containing the player (`p`) and a sample friend (`ann`).
+   - `Kid` class with mood, trust, personality, species, and memory tracking.
+   - Global `all_kids` list containing the player and other kids.
+   - Species selection (human, cat, dog, rabbit, fox, bear).
    - Personality assignment (`shy`, `energetic`, `calm`, `playful`).
 
 2. **Dialogue System**
@@ -28,26 +30,23 @@ Create a professional-grade visual novel set in a summer camp where the player (
    - Story arc detection (`best_friend_scene`, `rival_scene`) with trigger tracking.
    - Location labels and map screen (`camp_map`) for navigation.
 
-5. **Core Game Loop**
+5. **UI & Navigation**
+   - Title screen with New Game, Load Game, Settings, and Quit options.
+   - Character creation screen with name input and species selection.
+   - Settings screen with basic options (placeholder).
+   - Camp map navigation screen.
+
+6. **Core Game Loop**
    - `camp_loop` label initializing the camp environment and presenting choices.
    - Menu options for wandering, thinking, and interacting with the environment.
 
-6. **Utility Files**
-   - `.gitignore` for project exclusions.
-   - `debug_stats.rpy` for quick in-game variable inspection.
-
 ## Files Modified / Added (Recent Commits)
-- `game/systems/dialogue.rpy` – Updated dialogue selection logic.
-- `game/systems/personality.rpy` – Added personality line generation.
-- `game/systems/event_ai.rpy` – Event weighting based on relationships/mood.
-- `game/events/story_events.rpy` – Best-friend and rival scene implementations.
-- `game/systems/relationships.rpy` – Relationship tracking and change functions.
-- `game/systems/social_ai.rpy` – Social group formation algorithm.
-- `game/systems/scene_helpers.rpy` – Kid selection and relationship notes.
-- `game/systems/memory.rpy` – Memory logging and summary functions.
-- `game/characters.rpy` – Kid class definition and global list.
-- `game/init_kids.rpy` – Personality assignment at game start.
-- Additional scene scripts (`lake_scene`, `forest_scene`, `playground_scene`, etc.) with dialogue, event branching, and relationship updates.
+- `game/characters.rpy` – Added species support and player initialization.
+- `game/title_screen.rpy` – Created title screen with nostalgic camp theme.
+- `game/character_creation.rpy` – Implemented character creation with species and name selection.
+- `game/settings_screen.rpy` – Added basic settings screen placeholder.
+- `game/script.rpy` – Updated start sequence to begin with title screen.
+- Previous files: dialogue, relationships, memory, social AI, etc.
 
 ## Development Log (Error / Problem / Change Entries)
 | Date | Issue / Change | Details |
@@ -58,30 +57,45 @@ Create a professional-grade visual novel set in a summer camp where the player (
 | 2025-11-03 | **Added relationship event handling** | Positive/negative interactions affect trust/mood and trigger story arcs. |
 | 2025-11-03 | **Integrated story arcs** | Automatic best-friend or rival scene triggers based on relationship thresholds. |
 | 2025-11-03 | **Created debug screen** | Quick stats display for testing relationship values and moods. |
-| 2025-11-03 | **Minor syntax fix** | Corrected `say_kid` call to pass the correct key (`scene + "_" + beat`). |
-| 2025-11-03 | **Added memory summary** | Generates a textual summary of a kid’s positive vs. negative experiences. |
+| 2025-11-03 | **Added memory summary** | Generates a textual summary of a kid's positive vs. negative experiences. |
+| 2025-11-03 | **Added species system** | Player can choose from human or various animal species. |
+| 2025-11-03 | **Created title screen** | Professional title screen with nostalgic camp theme. |
+| 2025-11-03 | **Implemented character creation** | Name input and species selection with preview placeholder. |
+| 2025-11-03 | **Added settings screen** | Basic settings options (placeholder). |
 
 ## Next Steps (What to Work On)
-1. **Expand Event Variety**
-   - Add more specific event scripts (e.g., “campfire”, “cabin”, “outing”) with unique dialogue and choices.
-2. **Implement Player Choice System**
-   - Create a generic `conflict_choice` menu that allows the player to intervene, watch, or take sides, updating relationships accordingly.
-3. **Polish Dialogue**
-   - Refine personality lines for richer emotional depth (e.g., add “I’m scared” or “I’m excited” variants).
+1. **Visual Assets**
+   - Create character sprites for each species.
+   - Design backgrounds for camp locations (lake, forest, playground).
+   - Add UI elements (buttons, menus) with consistent visual style.
+
+2. **Character Sprites & Animations**
+   - Implement character sprites with different expressions based on mood.
+   - Add simple animations for interactions.
+
+3. **Sound Design**
+   - Add background music for different locations and moods.
+   - Implement sound effects for actions and interactions.
+
 4. **Save/Load System**
-   - Add persistent storage for `relationships`, `memory_log`, and `triggered_arcs` to maintain state across sessions.
-5. **Testing & Bug Fixing**
-   - Run through all scenes to ensure no `KeyError` or missing keys (`key` argument) occur.
-   - Verify that all menu actions correctly modify mood, trust, and memory.
-6. **UI/UX Enhancements**
-   - Design additional screens (e.g., inventory, character portraits) to enrich the visual novel feel.
-7. **Documentation**
-   - Populate this `PROJECT_SUMMARY.txt` with future changes, errors, and decisions for easy reference.
+   - Implement persistent storage for player progress, relationships, and memories.
+
+5. **Polish UI**
+   - Improve the visual design of all screens to match the nostalgic theme.
+   - Add transitions and animations between scenes.
+
+6. **Expand Content**
+   - Add more locations and events.
+   - Create more character options and deeper storylines.
+
+7. **Testing & Bug Fixing**
+   - Test the complete flow from title to gameplay.
+   - Ensure all systems work together correctly.
 
 ## How to Use This File
 - **Whenever you need a quick reference** to the current state of the project, open `game/PROJECT_SUMMARY.txt`.
-- **When adding new changes**, append a short entry to the “Development Log” section with a date, description, and details.
-- **Before starting work**, review the “Next Steps” to ensure you are focusing on the correct task.
+- **When adding new changes**, append a short entry to the "Development Log" section with a date, description, and details.
+- **Before starting work**, review the "Next Steps" to ensure you are focusing on the correct task.
 
 ---
 *End of file.*

@@ -4,8 +4,9 @@
 init python:
 
     class Kid(object):
-        def __init__(self, name):
+        def __init__(self, name, species="human"):
             self.name = name
+            self.species = species
             self.mood = 0          # 0 = neutral, positive = happy, negative = upset
             self.trust = 0         # 0 = neutral, positive = friendly, negative = wary
             self.personality = "calm"  # default personality
@@ -21,12 +22,21 @@ init python:
         def add_memory(self, event):
             self.memories.append(event)
 
-    # Create the player and a friend character
-    p = Kid("You")
-    ann = Kid("Ann")
+    # Species options for character creation
+    SPECIES_OPTIONS = [
+        ("human", "Human"),
+        ("cat", "Cat"),
+        ("dog", "Dog"),
+        ("rabbit", "Rabbit"),
+        ("fox", "Fox"),
+        ("bear", "Bear"),
+    ]
+
+    # Create the player (will be set after character creation)
+    p = None
 
     # Global list of all kid objects
-    all_kids = [p, ann]
+    all_kids = []
 
 # Expose the Kid class for other modules
 define _Kid = Kid
