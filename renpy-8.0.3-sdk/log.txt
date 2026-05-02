@@ -1,0 +1,160 @@
+Fri May  1 23:42:46 2026
+Linux-6.8.0-1044-azure-x86_64-with-glibc2.39
+Ren'Py 8.0.3.22090809
+ 
+
+Bootstrap to the start of init.init took 0.14s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.26s
+Loading script took 0.91s
+Loading save slot metadata. took 0.01s
+Loading persistent took 0.00s
+Set script version to: None (alternate path)
+Running init code took 0.46s
+Loading analysis data took 0.06s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.00s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.04s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Sound init failed. Proceeding anyway.
+Traceback (most recent call last):
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/audio/audio.py", line 960, in init
+    renpysound.init(renpy.config.sound_sample_rate, 2, bufsize, False, renpy.config.equal_mono)
+  File "renpysound.pyx", line 393, in renpy.audio.renpysound.init
+  File "renpysound.pyx", line 98, in renpy.audio.renpysound.check_error
+Exception: ALSA: Couldn't open audio device: No such file or directory
+Interface start took 0.62s
+Couldn't import sw renderer:
+Traceback (most recent call last):
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/core.py", line 2470, in make_draw
+    draw_objects[name] = draw_class(*args)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/swdraw.py", line 680, in __init__
+    self.reset()
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/swdraw.py", line 694, in reset
+    self.display_info = renpy.display.get_info()
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/__init__.py", line 56, in get_info
+    pygame.display.init()
+  File "src/pygame_sdl2/display.pyx", line 95, in pygame_sdl2.display.init
+pygame_sdl2.error.error: No available video device
+Unknown renderer: sw
+
+Initializing gl2 renderer:
+
+Full traceback:
+  File "renpy/common/00start.rpy", line 210, in script call
+    call _gl_test
+  File "renpy/common/00gltest.rpy", line 390, in script
+    $ __gl_test()
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/ast.py", line 1131, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/python.py", line 1061, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00gltest.rpy", line 390, in <module>
+    $ __gl_test()
+  File "renpy/common/00gltest.rpy", line 317, in _m1_00gltest__gl_test
+    _gl_performance_test()
+  File "renpy/common/00gltest.rpy", line 342, in _gl_performance_test
+    ui.interact(suppress_underlay=True, suppress_overlay=True)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/core.py", line 3341, in interact
+    self.start()
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/core.py", line 2267, in start
+    self.set_mode()
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/core.py", line 2575, in set_mode
+    if draw.init(virtual_size):
+  File "gl2draw.pyx", line 296, in renpy.gl2.gl2draw.GL2Draw.init
+  File "gl2draw.pyx", line 163, in renpy.gl2.gl2draw.GL2Draw.select_physical_size
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/__init__.py", line 56, in get_info
+    pygame.display.init()
+  File "src/pygame_sdl2/display.pyx", line 95, in pygame_sdl2.display.init
+error: No available video device
+
+While running game code:
+  File "renpy/common/00start.rpy", line 210, in script call
+    call _gl_test
+  File "renpy/common/00gltest.rpy", line 390, in script
+    $ __gl_test()
+  File "renpy/common/00gltest.rpy", line 390, in <module>
+    $ __gl_test()
+  File "renpy/common/00gltest.rpy", line 317, in _m1_00gltest__gl_test
+    _gl_performance_test()
+  File "renpy/common/00gltest.rpy", line 342, in _gl_performance_test
+    ui.interact(suppress_underlay=True, suppress_overlay=True)
+error: No available video device
+
+Full traceback:
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/bootstrap.py", line 277, in bootstrap
+    renpy.main.main()
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/main.py", line 660, in main
+    run(restart)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/main.py", line 146, in run
+    renpy.execution.run_context(True)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/execution.py", line 938, in run_context
+    context.run()
+  File "renpy/common/00start.rpy", line 210, in script call
+    call _gl_test
+  File "renpy/common/00gltest.rpy", line 390, in script
+    $ __gl_test()
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 441, in raise_
+  File "renpy/common/00start.rpy", line 210, in script call
+    call _gl_test
+  File "renpy/common/00gltest.rpy", line 390, in script
+    $ __gl_test()
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/ast.py", line 1131, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/python.py", line 1061, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00gltest.rpy", line 390, in <module>
+    $ __gl_test()
+  File "renpy/common/00gltest.rpy", line 317, in _m1_00gltest__gl_test
+    _gl_performance_test()
+  File "renpy/common/00gltest.rpy", line 342, in _gl_performance_test
+    ui.interact(suppress_underlay=True, suppress_overlay=True)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/core.py", line 3341, in interact
+    self.start()
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/core.py", line 2267, in start
+    self.set_mode()
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/core.py", line 2575, in set_mode
+    if draw.init(virtual_size):
+  File "gl2draw.pyx", line 296, in renpy.gl2.gl2draw.GL2Draw.init
+  File "gl2draw.pyx", line 163, in renpy.gl2.gl2draw.GL2Draw.select_physical_size
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/__init__.py", line 56, in get_info
+    pygame.display.init()
+  File "src/pygame_sdl2/display.pyx", line 95, in pygame_sdl2.display.init
+error: No available video device
+
+While running game code:
+  File "renpy/common/00start.rpy", line 210, in script call
+    call _gl_test
+  File "renpy/common/00gltest.rpy", line 390, in script
+    $ __gl_test()
+  File "renpy/common/00start.rpy", line 210, in script call
+    call _gl_test
+  File "renpy/common/00gltest.rpy", line 390, in script
+    $ __gl_test()
+  File "renpy/common/00gltest.rpy", line 390, in <module>
+    $ __gl_test()
+  File "renpy/common/00gltest.rpy", line 317, in _m1_00gltest__gl_test
+    _gl_performance_test()
+  File "renpy/common/00gltest.rpy", line 342, in _gl_performance_test
+    ui.interact(suppress_underlay=True, suppress_overlay=True)
+error: No available video device

@@ -1,0 +1,170 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "camp_game/script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+File "script.rpy", line 5: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    return
+    ^
+
+Ren'Py Version: Ren'Py 8.0.3.22090809
+Fri May  1 21:09:24 2026
