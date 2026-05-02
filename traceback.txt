@@ -1,22 +1,35 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 4, in script
-    jump title_screen
-ScriptError: could not find label 'title_screen'.
+  File "renpy/common/00gamepad.rpy", line 76, in script
+    init -1200 python in _gamepad:
+  File "renpy/common/00gamepad.rpy", line 76, in script
+    init -1200 python in _gamepad:
+  File "renpy/common/000window.rpy", line 107, in _window_auto_callback
+    if not store._window_auto:
+AttributeError: 'StoreModule' object has no attribute '_window_auto'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 4, in script
-    jump title_screen
-  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/ast.py", line 1974, in execute
-    rv = renpy.game.script.lookup(target)
-  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/script.py", line 927, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'title_screen'.
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/bootstrap.py", line 277, in bootstrap
+    renpy.main.main()
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/main.py", line 558, in main
+    renpy.game.context().run(node)
+  File "renpy/common/00gamepad.rpy", line 76, in script
+    init -1200 python in _gamepad:
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 441, in raise_
+  File "renpy/common/00gamepad.rpy", line 76, in script
+    init -1200 python in _gamepad:
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/ast.py", line 1128, in execute
+    statement_name("python")
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/ast.py", line 47, in statement_name
+    i(name)
+  File "renpy/common/000window.rpy", line 107, in _window_auto_callback
+    if not store._window_auto:
+AttributeError: 'StoreModule' object has no attribute '_window_auto'
 
 Linux-6.8.0-1044-azure-x86_64-with-glibc2.39 x86_64
 Ren'Py 8.0.3.22090809
  
-Sat May  2 20:10:23 2026
+Sat May  2 20:26:59 2026

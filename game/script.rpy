@@ -1,5 +1,4 @@
 # ENTRY POINT
 
 label start:
-    "Welcome to Summer Camp Adventures."
-    return
+    jump title_screen
