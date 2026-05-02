@@ -1,4 +1,4 @@
-Sat May  2 18:58:29 2026
+Sat May  2 19:29:50 2026
 Linux-6.8.0-1044-azure-x86_64-with-glibc2.39
 Ren'Py 8.0.3.22090809
  
@@ -6,17 +6,17 @@ Ren'Py 8.0.3.22090809
 Bootstrap to the start of init.init took 0.09s
 Early init took 0.00s
 Loader init took 0.01s
-Loading error handling took 0.03s
-Loading script took 0.10s
+Loading error handling took 0.05s
+Loading script took 0.34s
 Loading save slot metadata. took 0.01s
 Loading persistent took 0.00s
 Faled to initialize steam: OSError('/workspaces/camp-vn/renpy-8.0.3-sdk/lib/py3-linux-x86_64/libsteam_api.so: cannot open shared object file: No such file or directory')
-Running init code took 0.02s
+Running init code took 0.03s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
 Backing up script files to '/home/codespace/.renpy/backups/camp-vn':
-Dump and make backups. took 0.00s
+Dump and make backups. took 0.01s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.01s
@@ -27,13 +27,13 @@ Init translation took 0.01s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.04s
-Save pyanalysis. took 0.01s
-Save bytecode. took 0.02s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.03s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.23s
+Interface start took 0.22s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1280, 720)
@@ -49,7 +49,7 @@ Maximum texture size: 4096x4096
 
 Full traceback:
   File "game/systems/camp_loop.rpy", line 53, in script
-    "[part] of Day {store.current_day}."
+    narrator "[part] of Day [store.current_day]."
   File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/ast.py", line 921, in execute
     renpy.exports.say(who, what, *args, **kwargs)
   File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/exports.py", line 1373, in say
@@ -64,5 +64,94 @@ Exception: The say screen (or show_function) must return a Text object.
 
 While running game code:
   File "game/systems/camp_loop.rpy", line 53, in script
-    "[part] of Day {store.current_day}."
+    narrator "[part] of Day [store.current_day]."
 Exception: The say screen (or show_function) must return a Text object.
+Traceback (most recent call last):
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/execution.py", line 581, in run
+    node.execute()
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/ast.py", line 921, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/exports.py", line 1373, in say
+    who(what, *args, **kwargs)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/character.py", line 1266, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/character.py", line 927, in do_display
+    display_say(who,
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/character.py", line 624, in display_say
+    raise Exception("The say screen (or show_function) must return a Text object.")
+Exception: The say screen (or show_function) must return a Text object.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/subprocess.py", line 1189, in wait
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/subprocess.py", line 1917, in _wait
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/subprocess.py", line 1875, in _try_wait
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/lib/py3-linux-x86_64/../../renpy.py", line 251, in <module>
+    main()
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/lib/py3-linux-x86_64/../../renpy.py", line 247, in main
+    renpy.bootstrap.bootstrap(renpy_base)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/bootstrap.py", line 277, in bootstrap
+    renpy.main.main()
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/main.py", line 660, in main
+    run(restart)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/main.py", line 146, in run
+    renpy.execution.run_context(True)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/execution.py", line 938, in run_context
+    context.run()
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/execution.py", line 614, in run
+    raise ce
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/execution.py", line 611, in run
+    if renpy.display.error.report_exception(short, full, traceback_fn):
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/error.py", line 140, in report_exception
+    renpy.game.invoke_in_new_context(
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/game.py", line 286, in invoke_in_new_context
+    return callable(*args, **kwargs)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/error.py", line 48, in call_exception_screen
+    return renpy.ui.interact(mouse="screen", type="screen", suppress_overlay=True, suppress_underlay=True)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/core.py", line 3377, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/core.py", line 4258, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/layout.py", line 1175, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/layout.py", line 1175, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/layout.py", line 1175, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/screen.py", line 743, in event
+    rv = self.child.event(ev, x, y, st)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/layout.py", line 1175, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/layout.py", line 1399, in event
+    rv = super(Window, self).event(ev, x, y, st)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/layout.py", line 279, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/layout.py", line 279, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/layout.py", line 279, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/viewport.py", line 298, in event
+    rv = super(Viewport, self).event(ev, x, y, st)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/layout.py", line 279, in event
+    rv = d.event(ev, x - xo, y - yo, st)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/layout.py", line 1175, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/text/text.py", line 2037, in event
+    rv = self.style.hyperlink_functions[1](target)
+  File "renpy/common/_errorhandling.rpym", line 278, in _error_hyperlink_function
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/editor.py", line 167, in launch_editor
+    editor.open(i, line)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/editor.py", line 107, in open
+    subprocess.call([ "xdg-open", filename ])
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/subprocess.py", line 351, in call
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/subprocess.py", line 1202, in wait
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/subprocess.py", line 1911, in _wait
+KeyboardInterrupt
