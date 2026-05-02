@@ -167,3 +167,9 @@ Do not add features until nothing is broken.
 Test after every single file change.
 Update Section 3 and Section 6 at the end of the session.
 Write all code yourself, do not delegate structure or screens to aider.
+
+CRITICAL RULES FOR ANY AI ASSISTANT:
+- Do NOT invent character names. No character named Ann or any other name exists unless the project owner explicitly defines them.
+- All NPC names must be approved by the project owner before being written into any code or plan.
+- If you want to suggest an NPC, describe the role and ask the owner for a name first.
+- Never assume what characters exist. Only what is in this bible is real.
