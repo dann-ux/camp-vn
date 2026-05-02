@@ -44,3 +44,7 @@ screen title_screen():
         auto "camp_%s.png"
         xalign 0.9
         yalign 0.9
+
+
+label title_screen:
+    call screen title_screen
