@@ -69,16 +69,16 @@ label camp_loop:
     menu:
         "Wander around camp":
             p "I will wander around camp."
-            jump camp_loop
+            return
         "Think about something else":
             p "I need a moment to think."
-            jump camp_loop
+            return
         "Open map":
             jump camp_map
         "Check journal":
             call screen journal_screen
-            jump camp_loop
+            return
 
     # Advance time after each action
     $ advance_time()
-    jump camp_loop
+    return
