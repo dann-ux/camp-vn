@@ -244,7 +244,7 @@ init python:
                 "A race is okay, I guess.",
             ],
             "playful": [
-                "You always pick the loudest challenge.",
+                "You are always picking the loudest challenge.",
                 "You are on. Do not cry when I win.",
                 "This should be fun.",
             ],
