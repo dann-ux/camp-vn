@@ -8,8 +8,6 @@ label camp_loop:
     $ event_description = format_scene(kids, "freeplay")
     p event_description
 
-    $ add_memory(p, "entered camp loop") # Example memory addition
-
     menu:
         "Wander around camp":
             p "I will wander around camp."
