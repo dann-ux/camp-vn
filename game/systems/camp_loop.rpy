@@ -10,7 +10,7 @@ init python:
     TURNS_PER_PART = 3  # Number of loops before the day part changes
 
     # Global variables to track time
-    if not renpy.store.get("current_day", None):
+    if not hasattr(renpy.store, 'current_day'):
         current_day = 1
         current_part_index = 0
         turn_counter = 0
