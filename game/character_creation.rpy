@@ -21,7 +21,7 @@ screen character_creation():
             # Name input
             text "Name:" size 20
             input:
-                value ScreenVariableInputValue("player_name")
+                value DefaultInputValue("Camp Kid")
                 length 20
                 allow "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
 
