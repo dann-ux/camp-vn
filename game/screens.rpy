@@ -69,7 +69,6 @@ style button:
     background "#4CAF50"
     foreground "#FFFFFF"
     padding (8, 4)
-    radius 5
 
 style button_hover:
     background "#66BB6A"

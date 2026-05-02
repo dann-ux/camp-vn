@@ -2,8 +2,7 @@ screen title_screen():
 
     tag menu
 
-    # Background with nostalgic summer camp theme
-    background "#87CEEB"  # Sky blue background
+    add Solid("#87CEEB")
 
     # Camp logo placeholder (simple rectangle for now)
     frame:

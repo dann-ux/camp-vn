@@ -2,7 +2,7 @@ screen settings():
 
     tag menu
 
-    background "#87CEEB"
+    add Solid("#87CEEB")
 
     frame:
         xalign 0.5
