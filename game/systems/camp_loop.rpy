@@ -61,7 +61,7 @@ label camp_loop:
 
     $ kids = [p, ann]
     $ event_description = format_scene(kids, "freeplay")
-    p event_description
+    p "[event_description]"
 
     # Random event check
     $ _ = trigger_random_event()
