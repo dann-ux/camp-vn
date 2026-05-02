@@ -1,3 +1,6 @@
+# MEMORY SYSTEM
+# Stores interaction events between characters
+
 default memory_log = []
 
 init python:
