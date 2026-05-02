@@ -6,4 +6,4 @@ label start:
 
     "You hear voices in the distance."
 
-    return
+    jump camp_loop
