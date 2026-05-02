@@ -1,12 +1,12 @@
-Sat May  2 18:48:11 2026
+Sat May  2 18:50:26 2026
 Linux-6.8.0-1044-azure-x86_64-with-glibc2.39
 Ren'Py 8.0.3.22090809
  
 
-Bootstrap to the start of init.init took 0.08s
+Bootstrap to the start of init.init took 0.09s
 Early init took 0.00s
 Loader init took 0.01s
-Loading error handling took 0.03s
+Loading error handling took 0.02s
 Loading script took 0.08s
 Loading save slot metadata. took 0.01s
 Loading persistent took 0.00s
@@ -27,13 +27,13 @@ Init translation took 0.01s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
+Save screen analysis took 0.01s
+Prepare screens took 0.03s
 Save pyanalysis. took 0.01s
 Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.15s
+Interface start took 0.14s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1280, 720)
@@ -90,11 +90,11 @@ Full traceback:
     vbox:
   File "game/character_creation.rpy", line 23, in execute
     input:
-  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/behavior.py", line 1334, in __init__
-    default = value.get_text()
-  File "renpy/common/00inputvalues.rpy", line 181, in get_text
-    return cs.scope[self.variable]
-KeyError: 'player_name'
+  File "game/character_creation.rpy", line 23, in keywords
+    input:
+  File "game/character_creation.rpy", line 24, in <module>
+    value DefaultInputValue("Camp Kid")
+NameError: name 'DefaultInputValue' is not defined
 
 While running game code:
   File "game/character_creation.rpy", line 93, in script
@@ -111,6 +111,8 @@ While running game code:
     vbox:
   File "game/character_creation.rpy", line 23, in execute
     input:
-  File "renpy/common/00inputvalues.rpy", line 181, in get_text
-    return cs.scope[self.variable]
-KeyError: 'player_name'
+  File "game/character_creation.rpy", line 23, in keywords
+    input:
+  File "game/character_creation.rpy", line 24, in <module>
+    value DefaultInputValue("Camp Kid")
+NameError: name 'DefaultInputValue' is not defined

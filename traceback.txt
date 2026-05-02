@@ -15,9 +15,11 @@ While running game code:
     vbox:
   File "game/character_creation.rpy", line 23, in execute
     input:
-  File "renpy/common/00inputvalues.rpy", line 181, in get_text
-    return cs.scope[self.variable]
-KeyError: 'player_name'
+  File "game/character_creation.rpy", line 23, in keywords
+    input:
+  File "game/character_creation.rpy", line 24, in <module>
+    value DefaultInputValue("Camp Kid")
+NameError: name 'DefaultInputValue' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -64,13 +66,13 @@ Full traceback:
     vbox:
   File "game/character_creation.rpy", line 23, in execute
     input:
-  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/behavior.py", line 1334, in __init__
-    default = value.get_text()
-  File "renpy/common/00inputvalues.rpy", line 181, in get_text
-    return cs.scope[self.variable]
-KeyError: 'player_name'
+  File "game/character_creation.rpy", line 23, in keywords
+    input:
+  File "game/character_creation.rpy", line 24, in <module>
+    value DefaultInputValue("Camp Kid")
+NameError: name 'DefaultInputValue' is not defined
 
 Linux-6.8.0-1044-azure-x86_64-with-glibc2.39 x86_64
 Ren'Py 8.0.3.22090809
  
-Sat May  2 18:48:23 2026
+Sat May  2 18:50:35 2026
