@@ -36,7 +36,6 @@ screen character_creation():
                     for species_id, species_name in SPECIES_OPTIONS:
                         textbutton species_name:
                             action SetField(p, "species", species_id)
-                            background "#E0E0E0" if p.species == species_id else "#F5F5F5"
                             hover_background "#BDBDBD"
 
             # Character preview placeholder (shows a colored square based on species)
