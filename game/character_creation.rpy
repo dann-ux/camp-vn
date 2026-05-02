@@ -5,14 +5,15 @@ screen character_creation():
         xalign 0.5
         yalign 0.5
         background "#FFFFFF"
-        padding 30
         xmaximum 500
+        ymaximum 400
         vbox:
             spacing 20
+            xalign 0.5
+            yalign 0.5
             text "Create Your Character" size 30 bold True
             text "Enter your name:" size 20
             input:
-                id "name_input"
                 value VariableInputValue("player_name")
                 length 20
             textbutton "Start Game":
