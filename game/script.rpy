@@ -1,9 +1,9 @@
 label start:
 
-    "Hello"
+    p "Hello"
 
-    "The camp is quiet in the morning."
+    p "The camp is quiet in the morning."
 
-    "You hear voices in the distance."
+    p "You hear voices in the distance."
 
     jump camp_loop
