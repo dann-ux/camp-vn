@@ -1,4 +1,4 @@
-Sat May  2 18:44:22 2026
+Sat May  2 18:46:29 2026
 Linux-6.8.0-1044-azure-x86_64-with-glibc2.39
 Ren'Py 8.0.3.22090809
  
@@ -6,8 +6,8 @@ Ren'Py 8.0.3.22090809
 Bootstrap to the start of init.init took 0.09s
 Early init took 0.00s
 Loader init took 0.01s
-Loading error handling took 0.03s
-Loading script took 0.11s
+Loading error handling took 0.02s
+Loading script took 0.07s
 Loading save slot metadata. took 0.01s
 Loading persistent took 0.00s
 Faled to initialize steam: OSError('/workspaces/camp-vn/renpy-8.0.3-sdk/lib/py3-linux-x86_64/libsteam_api.so: cannot open shared object file: No such file or directory')
@@ -28,12 +28,12 @@ Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.01s
-Prepare screens took 0.04s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.16s
+Interface start took 0.13s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1280, 720)
@@ -48,8 +48,8 @@ Could not open 'cache/shaders.txt':
 Maximum texture size: 4096x4096
 
 Full traceback:
-  File "game/title_screen.rpy", line 42, in script
-    call screen title_screen
+  File "game/character_creation.rpy", line 93, in script
+    call screen character_creation
   File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/ast.py", line 2232, in execute
     self.call("execute")
   File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/ast.py", line 2220, in call
@@ -72,26 +72,47 @@ Full traceback:
     d.visit_all(callback, seen)
   File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/core.py", line 582, in visit_all
     d.visit_all(callback, seen)
-  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/screen.py", line 456, in visit_all
-    self.child.visit_all(callback, seen=None)
-  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/core.py", line 582, in visit_all
-    d.visit_all(callback, seen)
-  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/core.py", line 572, in visit_all
-    for d in self.visit():
-  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/layout.py", line 1254, in visit
-    self.style._visit_window(rv.append)
-  File "style.pyx", line 541, in renpy.style.StyleCore._visit_window
-  File "style.pyx", line 528, in renpy.style.StyleCore._get_unoffset
-  File "style.pyx", line 493, in renpy.style.StyleCore._get
-  File "style.pyx", line 710, in renpy.style.build_style
-  File "style.pyx", line 707, in renpy.style.build_style
-  File "gen3-static/style_functions.pyx", line 1417, in style_functions.padding_property
-  File "include/style_common.pxi", line 30, in style_functions.index_0
-TypeError: 'int' object is not subscriptable
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/screen.py", line 451, in visit_all
+    callback(self)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/core.py", line 3810, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/screen.py", line 462, in per_interact
+    self.update()
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/display/screen.py", line 653, in update
+    self.screen.function(**self.scope)
+  File "game/character_creation.rpy", line 1, in execute
+    screen character_creation():
+  File "game/character_creation.rpy", line 1, in execute
+    screen character_creation():
+  File "game/character_creation.rpy", line 8, in execute
+    frame:
+  File "game/character_creation.rpy", line 16, in execute
+    vbox:
+  File "game/character_creation.rpy", line 23, in execute
+    input:
+  File "game/character_creation.rpy", line 23, in keywords
+    input:
+  File "game/character_creation.rpy", line 24, in <module>
+    value Variable("player_name")
+NameError: name 'Variable' is not defined
 
-While processing the padding property of anonymous style:
-  File "game/title_screen.rpy", line 42, in script
-    call screen title_screen
+While running game code:
+  File "game/character_creation.rpy", line 93, in script
+    call screen character_creation
   File "renpy/common/000statements.rpy", line 609, in execute_call_screen
     store._return = renpy.call_screen(name, *args, **kwargs)
-TypeError: 'int' object is not subscriptable
+  File "game/character_creation.rpy", line 1, in execute
+    screen character_creation():
+  File "game/character_creation.rpy", line 1, in execute
+    screen character_creation():
+  File "game/character_creation.rpy", line 8, in execute
+    frame:
+  File "game/character_creation.rpy", line 16, in execute
+    vbox:
+  File "game/character_creation.rpy", line 23, in execute
+    input:
+  File "game/character_creation.rpy", line 23, in keywords
+    input:
+  File "game/character_creation.rpy", line 24, in <module>
+    value Variable("player_name")
+NameError: name 'Variable' is not defined
