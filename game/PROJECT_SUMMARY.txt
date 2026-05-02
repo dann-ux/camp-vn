@@ -1,0 +1,87 @@
+# PROJECT SUMMARY & DEVELOPMENT LOG
+
+## Current Goal
+Create a professional-grade visual novel set in a summer camp where the player (the protagonist) interacts with kids aged 5–11. The game should:
+- Feature age-appropriate dialogue and behavior.
+- Allow branching relationships (friends, rivals, best friends, enemies).
+- Include deep emotional moments tied to relationship states.
+- Provide multiple narrative paths based on player choices.
+
+## What Has Been Implemented So Far
+1. **Character System**
+   - `Kid` class with mood, trust, personality, and memory tracking.
+   - Global `all_kids` list containing the player (`p`) and a sample friend (`ann`).
+   - Personality assignment (`shy`, `energetic`, `calm`, `playful`).
+
+2. **Dialogue System**
+   - `DIALOGUE_BANK` with context-specific lines for each personality.
+   - `choose_dialogue` and `say_kid` functions for dynamic, non-repeating lines.
+   - `say_duo` for simultaneous kid dialogue.
+
+3. **Relationship & Memory Systems**
+   - `relationships` dictionary tracking positive/negative values.
+   - `change_relationship`, `get_relationship`, and `relationship_event` helpers.
+   - `memory_log` storing events per kid; summary generation based on positive/negative counts.
+
+4. **Scene & Event Management**
+   - `scene_kids`, `choose_event`, and `format_scene` for dynamic kid grouping.
+   - Story arc detection (`best_friend_scene`, `rival_scene`) with trigger tracking.
+   - Location labels and map screen (`camp_map`) for navigation.
+
+5. **Core Game Loop**
+   - `camp_loop` label initializing the camp environment and presenting choices.
+   - Menu options for wandering, thinking, and interacting with the environment.
+
+6. **Utility Files**
+   - `.gitignore` for project exclusions.
+   - `debug_stats.rpy` for quick in-game variable inspection.
+
+## Files Modified / Added (Recent Commits)
+- `game/systems/dialogue.rpy` – Updated dialogue selection logic.
+- `game/systems/personality.rpy` – Added personality line generation.
+- `game/systems/event_ai.rpy` – Event weighting based on relationships/mood.
+- `game/events/story_events.rpy` – Best-friend and rival scene implementations.
+- `game/systems/relationships.rpy` – Relationship tracking and change functions.
+- `game/systems/social_ai.rpy` – Social group formation algorithm.
+- `game/systems/scene_helpers.rpy` – Kid selection and relationship notes.
+- `game/systems/memory.rpy` – Memory logging and summary functions.
+- `game/characters.rpy` – Kid class definition and global list.
+- `game/init_kids.rpy` – Personality assignment at game start.
+- Additional scene scripts (`lake_scene`, `forest_scene`, `playground_scene`, etc.) with dialogue, event branching, and relationship updates.
+
+## Development Log (Error / Problem / Change Entries)
+| Date | Issue / Change | Details |
+|------|----------------|---------|
+| 2025-11-03 | **Added Kid class** | Provides state (mood, trust, personality, memories) and basic update methods. |
+| 2025-11-03 | **Implemented dialogue bank** | Age-appropriate lines for each personality; prevents repetition via history tracking. |
+| 2025-11-03 | **Fixed missing `key` argument** in `say_kid` call | Changed function signature to accept `key` parameter; updated calls accordingly. |
+| 2025-11-03 | **Added relationship event handling** | Positive/negative interactions affect trust/mood and trigger story arcs. |
+| 2025-11-03 | **Integrated story arcs** | Automatic best-friend or rival scene triggers based on relationship thresholds. |
+| 2025-11-03 | **Created debug screen** | Quick stats display for testing relationship values and moods. |
+| 2025-11-03 | **Minor syntax fix** | Corrected `say_kid` call to pass the correct key (`scene + "_" + beat`). |
+| 2025-11-03 | **Added memory summary** | Generates a textual summary of a kid’s positive vs. negative experiences. |
+
+## Next Steps (What to Work On)
+1. **Expand Event Variety**
+   - Add more specific event scripts (e.g., “campfire”, “cabin”, “outing”) with unique dialogue and choices.
+2. **Implement Player Choice System**
+   - Create a generic `conflict_choice` menu that allows the player to intervene, watch, or take sides, updating relationships accordingly.
+3. **Polish Dialogue**
+   - Refine personality lines for richer emotional depth (e.g., add “I’m scared” or “I’m excited” variants).
+4. **Save/Load System**
+   - Add persistent storage for `relationships`, `memory_log`, and `triggered_arcs` to maintain state across sessions.
+5. **Testing & Bug Fixing**
+   - Run through all scenes to ensure no `KeyError` or missing keys (`key` argument) occur.
+   - Verify that all menu actions correctly modify mood, trust, and memory.
+6. **UI/UX Enhancements**
+   - Design additional screens (e.g., inventory, character portraits) to enrich the visual novel feel.
+7. **Documentation**
+   - Populate this `PROJECT_SUMMARY.txt` with future changes, errors, and decisions for easy reference.
+
+## How to Use This File
+- **Whenever you need a quick reference** to the current state of the project, open `game/PROJECT_SUMMARY.txt`.
+- **When adding new changes**, append a short entry to the “Development Log” section with a date, description, and details.
+- **Before starting work**, review the “Next Steps” to ensure you are focusing on the correct task.
+
+---
+*End of file.*
