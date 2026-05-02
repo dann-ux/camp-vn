@@ -4,16 +4,18 @@
 
 init python:
     import random
+    import renpy.store as store
 
     # Define the parts of the day. Each part lasts a fixed number of turns.
     DAY_PARTS = ["Morning", "Afternoon", "Evening", "Night"]
     TURNS_PER_PART = 3  # Number of loops before the day part changes
 
-    # Global variables to track time
-    if not hasattr(renpy.store, 'current_day'):
-        current_day = 1
-        current_part_index = 0
-        turn_counter = 0
+    # Global variables to track time. Use the Ren'Py store so they persist across
+    # saves and are accessible from the script.
+    if not hasattr(store, 'current_day'):
+        store.current_day = 1
+        store.current_part_index = 0
+        store.turn_counter = 0
 
     # Random daily events that can happen at any time.
     DAILY_EVENTS = [
@@ -26,17 +28,15 @@ init python:
 
     def advance_time():
         """Advance the turn counter and change day parts as needed."""
-        global turn_counter, current_part_index, current_day
-
-        turn_counter += 1
-        if turn_counter >= TURNS_PER_PART:
-            turn_counter = 0
-            current_part_index = (current_part_index + 1) % len(DAY_PARTS)
-            if current_part_index == 0:
-                current_day += 1
+        store.turn_counter += 1
+        if store.turn_counter >= TURNS_PER_PART:
+            store.turn_counter = 0
+            store.current_part_index = (store.current_part_index + 1) % len(DAY_PARTS)
+            if store.current_part_index == 0:
+                store.current_day += 1
 
     def current_day_part():
-        return DAY_PARTS[current_part_index]
+        return DAY_PARTS[store.current_part_index]
 
     def trigger_random_event():
         """Pick a random event with a small chance each turn."""
@@ -53,7 +53,7 @@ label camp_loop:
 
     # Display a short narration about the time of day
     $ part = current_day_part()
-    "[part] of Day {current_day}."
+    "[part] of Day {store.current_day}."
 
     # Core camp activities (existing logic)
     p "We are now in the camp."
