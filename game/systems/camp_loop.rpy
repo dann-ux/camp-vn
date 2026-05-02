@@ -48,9 +48,6 @@ init python:
 
 label camp_loop:
 
-    # Show the day/night HUD at the top of the screen
-    call screen day_hud
-
     # Display a short narration about the time of day
     $ part = current_day_part()
     "[part] of Day {store.current_day}."
@@ -74,7 +71,7 @@ label camp_loop:
             p "I need a moment to think."
             return
         "Open map":
-            jump camp_map
+            return
         "Check journal":
             call screen journal_screen
             return
