@@ -36,14 +36,6 @@ screen title_screen():
             background "#F44336"  # Red
             hover_background "#EF5350"
     # Decorative elements
-    imagebutton:
-        auto "camp_%s.png"  # Placeholder for camp decorations
-        xalign 0.1
-        yalign 0.9
-    imagebutton:
-        auto "camp_%s.png"
-        xalign 0.9
-        yalign 0.9
 
 
 label title_screen:
