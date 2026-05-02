@@ -144,9 +144,9 @@ GIT:
 
 ## 5. NEXT FEATURES TO BUILD (in order)
 
-1. characters.rpy — define Ann (NPC) with basic dialogue
-2. Add Ann interaction to camp_loop
-3. Friendship counter for Ann
+1. characters.rpy — define NPCs (names TBD by project owner)
+2. Add first NPC interaction to camp_loop
+3. Friendship counter for first NPC
 4. First event scene (campfire)
 5. World map with 3 locations
 6. Memory system
