@@ -1,6 +1,6 @@
 label start:
 
-    "Hey, what's up?"
+    "Hello"
 
     "The camp is quiet in the morning."
 
