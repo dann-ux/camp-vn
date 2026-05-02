@@ -1,3 +1,6 @@
+# This file now only contains the location scene labels.
+# Random daily events are defined in separate files (event_*.rpy).
+
 label lake_scene:
 
     $ kids = scene_kids(2)

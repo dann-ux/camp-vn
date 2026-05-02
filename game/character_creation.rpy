@@ -39,12 +39,29 @@ screen character_creation():
                             background "#E0E0E0" if p.species == species_id else "#F5F5F5"
                             hover_background "#BDBDBD"
 
-            # Character preview placeholder
+            # Character preview placeholder (shows a colored square based on species)
             frame:
-                background "#BDBDBD"
+                background "#CCCCCC"
                 xfill True
                 ysize 150
-                text "Character Preview" size 20 align (0.5, 0.5)
+                if p:
+                    if p.species == "human":
+                        $ preview_color = "#FFDAB9"
+                    elif p.species == "cat":
+                        $ preview_color = "#FFCC99"
+                    elif p.species == "dog":
+                        $ preview_color = "#FFE4B5"
+                    elif p.species == "rabbit":
+                        $ preview_color = "#FFF0F5"
+                    elif p.species == "fox":
+                        $ preview_color = "#FFEFD5"
+                    elif p.species == "bear":
+                        $ preview_color = "#D2B48C"
+                    else:
+                        $ preview_color = "#CCCCCC"
+                else:
+                    $ preview_color = "#CCCCCC"
+                add Solid(preview_color) xpos 0 ypos 0 xsize 200 ysize 150
 
             # Navigation buttons
             hbox:
@@ -69,7 +86,7 @@ label character_creation:
     # Initialize player name
     $ player_name = "Camp Kid"
 
-    # Create player character
+    # Create player character (species will be set by the screen)
     $ p = Kid(player_name, species="human")
     $ all_kids = [p]  # Start with just the player
 
