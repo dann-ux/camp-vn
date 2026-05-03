@@ -5,11 +5,11 @@ label start_game:
     jump camp_loop
 
 label camp_loop:
-    "Day [camp_day] - [current_phase.title()] at Pine Ridge Summer Camp."
+    "Day [camp_day] - [current_phase] at Pine Ridge Summer Camp."
     
     menu:
         "Explore the lake":
-            if current_phase == "evening":
+            if current_phase == "Evening":
                 "The lake is too dark to explore safely right now."
                 jump camp_loop
             call lake_area
@@ -26,27 +26,29 @@ label camp_loop:
         "Toggle Debug":
             call toggle_debug
         "Go to sleep":
-            if current_phase != "evening":
+            if current_phase != "Evening":
                 "It's too early to sleep. The sun is still up."
                 jump camp_loop
             "You turn in early. Tomorrow will bring new friends and new stories."
             $ camp_day += 1
-            $ current_phase = "morning"
+            $ current_phase = "Morning"
             jump camp_loop
 
 label phase_transition:
-    if current_phase == "morning":
-        $ current_phase = "afternoon"
-    elif current_phase == "afternoon":
-        $ current_phase = "evening"
+    if current_phase == "Morning":
+        $ current_phase = "Afternoon"
+    elif current_phase == "Afternoon":
+        $ current_phase = "Evening"
     else:
-        $ current_phase = "morning"
+        $ current_phase = "Morning"
         $ camp_day += 1
+    call social_event_check
     jump camp_loop
 
 label lake_area:
     scene bg_camp with dissolve
-    if fox1_relationship <= -10:        "You spot Fox Kid 1 by the water. They cross their arms and look away when you approach."
+    if fox1_relationship <= -10:
+        "You spot Fox Kid 1 by the water. They cross their arms and look away when you approach."
         show fox1 at center with moveinright
         fox1 "Don't bother me."
         hide fox1 with moveoutleft
@@ -95,7 +97,8 @@ label cabin_area:
         dog1 "Look what I found! Rare holographic cards. Want to trade?"
         menu:
             "Trade fairly":
-                "You both swap cards and chat about your favorite games."                $ dog1_relationship += 3
+                "You both swap cards and chat about your favorite games."
+                $ dog1_relationship += 3
                 $ dog1_shared_cards = True
             "Say you're not interested":
                 dog1 "Oh... okay. Maybe later."
@@ -144,7 +147,8 @@ label lodge_area:
         "A tabby cat kid is curled up in an armchair, deeply focused on a thick storybook."
         show cat1 at center with moveinright
         cat1 "Just a moment... I'm at the best part. It's about a camp for magical animals."
-        menu:            "Ask about the book":
+        menu:
+            "Ask about the book":
                 cat1 "Oh! It says the real magic happens when you make friends. Want to read it together later?"
                 $ cat1_relationship += 2
                 $ cat1_read_together = True

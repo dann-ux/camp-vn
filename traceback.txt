@@ -1,37 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/images.rpy", line 9, in script
-    init python:
-  File "game/images.rpy", line 9, in script
-    init python:
-  File "game/images.rpy", line 10, in <module>
-    config.default_transition = dissolve
-Exception: config.default_transition is not a known configuration variable.
+  File "renpy/common/00start.rpy", line 192, in script
+    python:
+  File "renpy/common/00start.rpy", line 193, in <module>
+    renpy.execute_default_statement(True)
+  File "game/variables.rpy", line 5, in set_default
+    default fox1_relationship = 0
+Exception: store.fox1_relationship is being given a default a second time.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/bootstrap.py", line 277, in bootstrap
-    renpy.main.main()
-  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/main.py", line 558, in main
-    renpy.game.context().run(node)
-  File "game/images.rpy", line 9, in script
-    init python:
-  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 441, in raise_
-  File "game/images.rpy", line 9, in script
-    init python:
+  File "renpy/common/00start.rpy", line 192, in script
+    python:
   File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/ast.py", line 1131, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/python.py", line 1061, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/images.rpy", line 10, in <module>
-    config.default_transition = dissolve
-  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/defaultstore.py", line 105, in __setattr__
-    raise Exception('config.%s is not a known configuration variable.' % (name))
-Exception: config.default_transition is not a known configuration variable.
+  File "renpy/common/00start.rpy", line 193, in <module>
+    renpy.execute_default_statement(True)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/exports.py", line 3797, in execute_default_statement
+    i.set_default(start)
+  File "game/variables.rpy", line 5, in set_default
+    default fox1_relationship = 0
+Exception: store.fox1_relationship is being given a default a second time.
 
 Linux-6.8.0-1044-azure-x86_64-with-glibc2.39 x86_64
 Ren'Py 8.0.3.22090809
  
-Sun May  3 04:47:29 2026
+Sun May  3 06:22:09 2026

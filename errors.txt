@@ -2,7 +2,25 @@
 errors listed below, and try again.
 
 
-File "game/camp_loop.rpy", line 151: Indentation mismatch.
+File "game/camp_loop.rpy", line 50: Line is indented, but the preceding scene statement statement does not expect a block. Please check this line's indentation.
+    "You spot Fox Kid 1 by the water. They cross their arms and look away when you approach."
+    ^
+
+File "game/camp_loop.rpy", line 55: expected statement.
+    elif fox1_relationship > 10:
+                           ^
+
+File "game/camp_loop.rpy", line 69: expected statement.
+    else:
+        ^
+
+File "game/camp_loop.rpy", line 98: end of line expected.
+    "Trade fairly":                "You both swap cards and chat about your favorite games."
+                                   ^
+
+File "game/camp_loop.rpy", line 147: end of line expected.
+    cat1 "Just a moment... I'm at the best part. It's about a camp for magical animals."        menu:
+                                                                                                ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sun May  3 05:23:36 2026
+Sun May  3 06:13:05 2026
