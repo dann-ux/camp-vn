@@ -6,6 +6,7 @@ image dog1 = "images/dog1.png"
 image cat1 = "images/cat1.png"
 
 # Professional transition defaults
-define config.default_transition = dissolve
-define config.enter_transition = dissolve
-define config.exit_transition = dissolve
+init python:
+    config.default_transition = dissolve
+    config.enter_transition = dissolve
+    config.exit_transition = dissolve

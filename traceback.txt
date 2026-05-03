@@ -1,13 +1,13 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00gamepad.rpy", line 76, in script
-    init -1200 python in _gamepad:
-  File "renpy/common/00gamepad.rpy", line 76, in script
-    init -1200 python in _gamepad:
-  File "renpy/common/000window.rpy", line 107, in _window_auto_callback
-    if not store._window_auto:
-AttributeError: 'StoreModule' object has no attribute '_window_auto'
+  File "game/images.rpy", line 9, in script
+    define config.default_transition = dissolve
+  File "game/images.rpy", line 9, in script
+    define config.default_transition = dissolve
+  File "renpy/common/000namespaces.rpy", line 33, in set
+    setattr(self.nso, name, value)
+Exception: config.default_transition is not a known configuration variable.
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -16,20 +16,22 @@ Full traceback:
     renpy.main.main()
   File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/main.py", line 558, in main
     renpy.game.context().run(node)
-  File "renpy/common/00gamepad.rpy", line 76, in script
-    init -1200 python in _gamepad:
+  File "game/images.rpy", line 9, in script
+    define config.default_transition = dissolve
   File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 441, in raise_
-  File "renpy/common/00gamepad.rpy", line 76, in script
-    init -1200 python in _gamepad:
-  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/ast.py", line 1128, in execute
-    statement_name("python")
-  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/ast.py", line 47, in statement_name
-    i(name)
-  File "renpy/common/000window.rpy", line 107, in _window_auto_callback
-    if not store._window_auto:
-AttributeError: 'StoreModule' object has no attribute '_window_auto'
+  File "game/images.rpy", line 9, in script
+    define config.default_transition = dissolve
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/ast.py", line 2441, in execute
+    self.set()
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/ast.py", line 2459, in set
+    ns.set(self.varname, value)
+  File "renpy/common/000namespaces.rpy", line 33, in set
+    setattr(self.nso, name, value)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/defaultstore.py", line 105, in __setattr__
+    raise Exception('config.%s is not a known configuration variable.' % (name))
+Exception: config.default_transition is not a known configuration variable.
 
 Linux-6.8.0-1044-azure-x86_64-with-glibc2.39 x86_64
 Ren'Py 8.0.3.22090809
  
-Sat May  2 20:26:59 2026
+Sun May  3 04:40:50 2026
