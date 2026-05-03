@@ -2,9 +2,7 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 35: expected statement.
-    for r in results:
-          ^
+File "game/camp_loop.rpy", line 151: Indentation mismatch.
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sat May  2 00:04:34 2026
+Sun May  3 05:23:36 2026
