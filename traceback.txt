@@ -2,11 +2,11 @@
 
 While running game code:
   File "game/images.rpy", line 9, in script
-    define config.default_transition = dissolve
+    init python:
   File "game/images.rpy", line 9, in script
-    define config.default_transition = dissolve
-  File "renpy/common/000namespaces.rpy", line 33, in set
-    setattr(self.nso, name, value)
+    init python:
+  File "game/images.rpy", line 10, in <module>
+    config.default_transition = dissolve
 Exception: config.default_transition is not a known configuration variable.
 
 -- Full Traceback ------------------------------------------------------------
@@ -17,16 +17,16 @@ Full traceback:
   File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/main.py", line 558, in main
     renpy.game.context().run(node)
   File "game/images.rpy", line 9, in script
-    define config.default_transition = dissolve
+    init python:
   File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 441, in raise_
   File "game/images.rpy", line 9, in script
-    define config.default_transition = dissolve
-  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/ast.py", line 2441, in execute
-    self.set()
-  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/ast.py", line 2459, in set
-    ns.set(self.varname, value)
-  File "renpy/common/000namespaces.rpy", line 33, in set
-    setattr(self.nso, name, value)
+    init python:
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/ast.py", line 1131, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/python.py", line 1061, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/images.rpy", line 10, in <module>
+    config.default_transition = dissolve
   File "/workspaces/camp-vn/renpy-8.0.3-sdk/renpy/defaultstore.py", line 105, in __setattr__
     raise Exception('config.%s is not a known configuration variable.' % (name))
 Exception: config.default_transition is not a known configuration variable.
@@ -34,4 +34,4 @@ Exception: config.default_transition is not a known configuration variable.
 Linux-6.8.0-1044-azure-x86_64-with-glibc2.39 x86_64
 Ren'Py 8.0.3.22090809
  
-Sun May  3 04:40:50 2026
+Sun May  3 04:47:29 2026
