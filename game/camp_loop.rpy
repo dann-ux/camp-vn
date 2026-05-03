@@ -5,10 +5,6 @@ label start_game:
     jump camp_loop
 
 label camp_loop:
-    python:
-        current_phase = store.current_phase if hasattr(store, "current_phase") else "morning"
-        store.current_phase = current_phase
-
     "Day [camp_day] - [current_phase.title()] at Pine Ridge Summer Camp."
     
     menu:
@@ -27,29 +23,30 @@ label camp_loop:
         "Rest and wait":
             "You take a quiet moment to yourself."
             jump phase_transition
+        "Toggle Debug":
+            call toggle_debug
         "Go to sleep":
             if current_phase != "evening":
                 "It's too early to sleep. The sun is still up."
                 jump camp_loop
             "You turn in early. Tomorrow will bring new friends and new stories."
             $ camp_day += 1
-            $ store.current_phase = "morning"
+            $ current_phase = "morning"
             jump camp_loop
 
 label phase_transition:
-    python:
-        if store.current_phase == "morning":
-            store.current_phase = "afternoon"
-        elif store.current_phase == "afternoon":
-            store.current_phase = "evening"
-        else:
-            store.current_phase = "morning"
-            store.camp_day += 1
+    if current_phase == "morning":
+        $ current_phase = "afternoon"
+    elif current_phase == "afternoon":
+        $ current_phase = "evening"
+    else:
+        $ current_phase = "morning"
+        $ camp_day += 1
     jump camp_loop
+
 label lake_area:
     scene bg_camp with dissolve
-    if fox1_relationship <= -10:
-        "You spot Fox Kid 1 by the water. They cross their arms and look away when you approach."
+    if fox1_relationship <= -10:        "You spot Fox Kid 1 by the water. They cross their arms and look away when you approach."
         show fox1 at center with moveinright
         fox1 "Don't bother me."
         hide fox1 with moveoutleft
@@ -95,10 +92,10 @@ label cabin_area:
     elif dog1_relationship > 10:
         "Dog Kid 1 pats the empty spot next to them on the bunk."
         show dog1 at center with moveinright
-        dog1 "Look what I found! Rare holographic cards. Want to trade?"        menu:
+        dog1 "Look what I found! Rare holographic cards. Want to trade?"
+        menu:
             "Trade fairly":
-                "You both swap cards and chat about your favorite games."
-                $ dog1_relationship += 3
+                "You both swap cards and chat about your favorite games."                $ dog1_relationship += 3
                 $ dog1_shared_cards = True
             "Say you're not interested":
                 dog1 "Oh... okay. Maybe later."
@@ -144,10 +141,10 @@ label lodge_area:
         hide cat1 with moveoutleft
         return
     else:
-        "A tabby cat kid is curled up in an armchair, deeply focused on a thick storybook."        show cat1 at center with moveinright
+        "A tabby cat kid is curled up in an armchair, deeply focused on a thick storybook."
+        show cat1 at center with moveinright
         cat1 "Just a moment... I'm at the best part. It's about a camp for magical animals."
-        menu:
-            "Ask about the book":
+        menu:            "Ask about the book":
                 cat1 "Oh! It says the real magic happens when you make friends. Want to read it together later?"
                 $ cat1_relationship += 2
                 $ cat1_read_together = True
