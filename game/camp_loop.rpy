@@ -1,7 +1,7 @@
 label start_game:
     scene bg_camp with fade
     "The bus pulls up to the camp gates."
-    "You step out, your bag slung over your shoulder, ready for the summer."
+    "You step out, bag over your shoulder, ready for the summer."
     jump camp_loop
 
 label camp_loop:
@@ -62,6 +62,8 @@ label lake_area:
                 "You spend the afternoon laughing and practicing."
                 $ fox1_relationship += 3
                 $ fox1_saw_stone_skip = True
+                if fox1_dog1_rel < -5:
+                    $ dog1_relationship -= 1
             "Decline gently":
                 fox1 "Alright, catch you later!"
                 $ fox1_relationship += 0
@@ -77,6 +79,8 @@ label lake_area:
                 fox1 "Nice arc! We should practice together tomorrow."
                 $ fox1_relationship += 2
                 $ fox1_saw_stone_skip = True
+                if fox1_dog1_rel < -5:
+                    $ dog1_relationship -= 1
             "Polite decline":
                 fox1 "No worries! Maybe later."
                 $ fox1_relationship += 0
@@ -100,6 +104,8 @@ label cabin_area:
                 "You both swap cards and chat about your favorite games."
                 $ dog1_relationship += 3
                 $ dog1_shared_cards = True
+                if fox1_dog1_rel < -5:
+                    $ fox1_relationship -= 1
             "Say you're not interested":
                 dog1 "Oh... okay. Maybe later."
                 $ dog1_relationship -= 1
@@ -114,6 +120,8 @@ label cabin_area:
                 dog1 "Check out this one! It's rare. We could swap if you want!"
                 $ dog1_relationship += 2
                 $ dog1_shared_cards = True
+                if fox1_dog1_rel < -5:
+                    $ fox1_relationship -= 1
             "Say hi and step away":
                 dog1 "Cool. Catch you around!"
                 $ dog1_relationship += 0
@@ -138,6 +146,8 @@ label lodge_area:
                 "You sit close and read aloud together. It feels peaceful."
                 $ cat1_relationship += 3
                 $ cat1_read_together = True
+                if fox1_cat1_rel > 5:
+                    $ fox1_relationship += 1
             "Ask what it's about":
                 cat1 "It's a secret. You have to earn it."
                 $ cat1_relationship += 0
@@ -152,6 +162,8 @@ label lodge_area:
                 cat1 "Oh! It says the real magic happens when you make friends. Want to read it together later?"
                 $ cat1_relationship += 2
                 $ cat1_read_together = True
+                if fox1_cat1_rel > 5:
+                    $ fox1_relationship += 1
             "Give them space":
                 cat1 "Thanks. See you around."
                 $ cat1_relationship += 0

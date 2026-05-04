@@ -1,3 +1,4 @@
+
 label social_event_check:
     # Check relationship thresholds and memory flags for organic events
     if fox1_dog1_rel <= -10 and not fox1_dog1_argued:

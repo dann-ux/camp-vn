@@ -10,17 +10,17 @@ File "game/camp_loop.rpy", line 55: expected statement.
     elif fox1_relationship > 10:
                            ^
 
-File "game/camp_loop.rpy", line 69: expected statement.
+File "game/camp_loop.rpy", line 71: expected statement.
     else:
         ^
 
-File "game/camp_loop.rpy", line 98: end of line expected.
-    "Trade fairly":                "You both swap cards and chat about your favorite games."
-                                   ^
+File "game/camp_loop.rpy", line 98: expected statement.
+    "Dog Kid 1 pats the empty spot next to them on the bunk."        show dog1 at center with moveinright
+                                                                     ^
 
 File "game/camp_loop.rpy", line 147: end of line expected.
-    cat1 "Just a moment... I'm at the best part. It's about a camp for magical animals."        menu:
-                                                                                                ^
+    if fox1_cat1_rel > 5:                    $ fox1_relationship += 1
+                                             ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sun May  3 06:13:05 2026
+Mon May  4 00:47:44 2026
